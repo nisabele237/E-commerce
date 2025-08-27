@@ -1,12 +1,19 @@
 package com.example.Test.controller;
 
+import com.example.Test.dto.Login;
+import com.example.Test.model.ChatMessage;
 import com.example.Test.model.Produit;
 import com.example.Test.model.Utilisateur;
+import com.example.Test.repository.ChatRepository;
 import com.example.Test.service.Utilisateur_Produit_CommandeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -16,16 +23,27 @@ public class Utilisateur_Produit_CommandeController
     @Autowired
     private  Utilisateur_Produit_CommandeService utilisateurProduitCommandeService;
 
+
+
+    @GetMapping("/public")
+    public String Public (){
+        return "Accès public";
+    }
+
+
     @PostMapping("/compte/user")
     public ResponseEntity<?> createutilisateur(@RequestBody Utilisateur user){
+        System.out.println("hi");
         return utilisateurProduitCommandeService.createutilisateur(user);
     }
     @PostMapping("/validation/user/{email}/{code}")
     public ResponseEntity<?> validutilisateur(@PathVariable String email,@PathVariable String code){
         return utilisateurProduitCommandeService.validUtilisateur(email,code);
     }
-    @PostMapping("/login/user/{email}/{password}")
-    public ResponseEntity<?> loginutilisateur(@PathVariable String email,@PathVariable String password){
+    @PostMapping("/login/user")
+    public ResponseEntity<?> loginutilisateur(@RequestBody Login login){
+        String email = login.getEmail();
+        String password = login.getPassword();
         return utilisateurProduitCommandeService.logInUser(email,password);
     }
     @PostMapping("/logout/user/{email}")

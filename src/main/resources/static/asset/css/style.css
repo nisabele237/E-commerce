@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redressed&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.redressed{
+    font-family: "Redressed",cursive;
+}
+
+.merriweather{
+    font-family: "Merriweather",serif;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather",serif;
+    scroll-behavior: none;
+    list-style: none;
+}
+
+.all{
+ background: #f7f5f2;
+}
+
+html ::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background:rgb(231, 13, 115);
+    border-radius: 10px;
+}
+
+html ::-webkit-scrollbar{
+    width: 10px;
+}
+
+/*Navbar*/
+.navbar{
+    background: rgb(253, 245, 253);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+
+.navbar-nav{
+    margin-left: 50px;
+    
+}
+#logo{
+    width: 100px;
+    height:80px;
+}
+
+.nav-item .nav-link{
+    margin-left: 70px;
+    font-weight: bold;
+    color: black;
+    font-size:1fr;
+    transition:0.5s;
+    
+}
+
+.nav-item .nav-link:hover{
+    background-color: rgb(231, 13, 115);
+    color:white;
+    transform: translateY(-5px);
+    border-radius: 5px;
+
+}
+
+/*Home*/
+
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: 70%;
+    background-attachment: fixed;
+}
+#home .transparence {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+}
+ #home .content{
+    padding-top: 100px;
+    margin-left: 60px;
+   
+}
+
+
+#home .content h1{
+    color: rgb(250, 127, 168);
+    text-shadow: 2px black;
+    font-size: 90px;
+}
+
+#home .content p{
+    color:rgb(241, 168, 192);
+    
+}
+
+
+#custom-btn {
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #f7f5f2;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+#custom-btn:hover {
+    background-color: rgb(211, 68, 92);
+    color: rgb(252, 247, 248);
+}
+
+#btn1{
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s,ease;
+    cursor:pointer;
+    border-radius: 5px;
+    background-color:#f7f5f2;
+    margin-right: 20px;
+}
+#btn1:hover{
+    background-color: rgb(211, 68, 92);
+    color:rgb(252, 247, 248);
+}
+
+@media screen and (max-width:420px) {
+    #home .content h1{
+        font-size: 30px;
+    }
+    
+}
+
+/*contenu*/
+#about{
+    width: 100%;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(212, 66, 115);
+}
+
+.heading span{
+    color:rgb(212, 66, 115);
+}
+.signature{
+    color:rgb(212, 66, 115);
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: end;
+}
+
+#product{
+    background-image: url(../img/img1.jpg);
+    background-position: 70%;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+
+}
+#footer{
+    width: 100%;
+    background:rgb(212, 66, 115);
+    margin-top: 50px;
+ }
+ .footer-logo img{
+    border-radius: 10px;
+    width: 160px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 2 0px;
+    cursor: pointer;
+ }
+
+.social-link i{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+ }
+
+ .credits{
+    color: white;
+    margin-top: 10px;
+    text-shadow: 0px 0px 1px black;
+ }
+
+ .credits a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+ }
+
+ .credits a span{
+    color: black;
+ }
+
+ .copyrigth span{
+    color: black;
+ }
+
+ html{
+scroll-behavior: smooth;
+ }
+ .arrow{
+    position: fixed;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-align: center;
+    line-height: 50px;
+    
+ }
+ h5{
+     text-align: center;
+     font-weight: bold;
+     text-shadow: 2px;
+     color:rosybrown;
+ }
