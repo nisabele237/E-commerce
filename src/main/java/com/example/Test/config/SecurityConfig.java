@@ -17,6 +17,7 @@ public class SecurityConfig {
                          .requestMatchers("/", "/index.html", "/css/**", "/js/**", "/images/**").permitAll()
                          .requestMatchers("/store/validation/user/{email}/{code}").permitAll()
                          .requestMatchers("/store/login/user").permitAll()
+                         .requestMatchers("/asset/**").permitAll()
                          .requestMatchers(
                                  "/v3/api-docs/**",
                                  "/swagger-ui/**",
