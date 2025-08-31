@@ -49,7 +49,7 @@ public class Utilisateur_Produit_CommandeService {
         int max = 9999;
         int code = random.nextInt((max - min) + 1) + min;
         user.setCode(String.valueOf(code));
-       //emailService.sendMail(user.getEmail(),"Code de Verification",user.getCode());
+       emailService.sendMail(user.getEmail(),"Code de Verification",user.getCode());
 
         user.statusverse();
         utilisateurRepository.save(Utilisateur.builder()

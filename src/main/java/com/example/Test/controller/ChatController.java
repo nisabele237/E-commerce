@@ -2,6 +2,7 @@ package com.example.Test.controller;
 
 import com.example.Test.model.ChatMessage;
 import com.example.Test.repository.ChatRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
+@Tag(name="Chat")
 public class ChatController {
 
     @Autowired
@@ -32,6 +34,9 @@ public class ChatController {
     }
 
     @GetMapping("/historique")
+    @Operation(
+            summary = "Obtenir tous les messages précédents"
+    )
     @ResponseBody
     public List<ChatMessage> getHistorique(){
         return  chatRepository.findAllByOrderByTimeAsc();
